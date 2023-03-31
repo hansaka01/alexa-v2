@@ -5804,9 +5804,9 @@ case 'wiki':
   if (!text) throw `Exapmle: ${command} Minecraft`
   let jsonp = await wikipedia(text)
   reply(`
-🔎${r} Ressult from: *${text}*
-🖼️${r} Image: ${jsonp.img}
-📖${r} Articles: 
+🔎Ressult from: *${text}*
+🖼️Image: ${jsonp.img}
+📖Articles: 
 ${jsonp.articles}
 `.trim())
 
