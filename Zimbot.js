@@ -162,10 +162,10 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
 };
     
 const reply = (teks) => {
-  ZimBotInc.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "ᴢɪᴍ ʙᴏᴛ ᴠ5",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, detectLinks: true,body: "DRIPS OFC", thumbnail: fs.readFileSync('./drips.jpg'),sourceUrl: ("https://youtu.be/KNu-gr2h7bo")}}})
+  ZimBotInc.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "𝙰𝙻𝙴𝚇𝙰-𝚅2",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, detectLinks: true,body: "DRIPS OFC", thumbnail: fs.readFileSync('./drips.jpg'),sourceUrl: ("https://youtu.be/KNu-gr2h7bo")}}})
 }
 const replay = (teks) => {
-  ZimBotInc.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "ᴢɪᴍ ʙᴏᴛ ᴠ5",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, body: "DRIPS OFC", thumbnail: fs.readFileSync('./drips.jpg'),sourceUrl: ("https://youtu.be/KNu-gr2h7bo")}}})
+  ZimBotInc.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "𝙰𝙻𝙴𝚇𝙰-𝚅2",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, body: "DRIPS OFC", thumbnail: fs.readFileSync('./drips.jpg'),sourceUrl: ("https://youtu.be/KNu-gr2h7bo")}}})
 }    
  
 const tempButtons = async (remoteJid, text, footer, content) => {
@@ -408,7 +408,7 @@ participant : '0@s.whatsapp.net'
     forwardingScore: 9999,
     isForwarded: false, 
 showAdAttribution: true,
-title: "ᴢɪᴍ ʙᴏᴛ ᴠ5",
+title: "𝙰𝙻𝙴𝚇𝙰-𝚅2",
 body: "GIVE IT A STAR",
 mediaType: "VIDEO",
 mediaUrl: `https://githb.com/zim-bot/zimbot-v4`,
@@ -429,7 +429,7 @@ participant : '0@s.whatsapp.net'
   message: {
   documentMessage: {
 showAdAttribution: true,
-  title: "ᴢɪᴍ ʙᴏᴛ ᴠ5", 
+  title: "𝙰𝙻𝙴𝚇𝙰-𝚅2", 
   jpegThumbnail: fs.readFileSync('./drips.jpg')
 }
 }
@@ -444,7 +444,7 @@ showAdAttribution: true,
                },
     message: { 
        "extendedTextMessage": {
-                "text":'SUB DRIPS OFC',
+                "text":'SUB RESIDENT GAMING SL',
                 "title": 'ᴢɪᴍ ʙᴏᴛ ɪɴᴄ',
                 'jpegThumbnail': fs.readFileSync('./drips.jpg')
              }
@@ -1094,7 +1094,7 @@ var hg = `*Mission to kill Slime*\n\n🎁 *Reward for killing Slime*\n ┊ *Mone
             emoji.get(satu)
             .then(emoji => {
             const buttons = [{buttonId: "y", buttonText: {displayText:satu}, type: 1}]
-            const buttonMessage = {image: {url: emoji.images[dua].url},caption: "ᴢɪᴍ ʙᴏᴛ ᴠ5",footerText: 'Loading...',buttons: buttons,headerType: 4}
+            const buttonMessage = {image: {url: emoji.images[dua].url},caption: "𝙰𝙻𝙴𝚇𝙰-𝚅2",footerText: 'Loading...',buttons: buttons,headerType: 4}
             ZimBotInc.sendMessage(from, buttonMessage, {quoted:m})
             })
             } catch (e) {
@@ -1418,7 +1418,7 @@ setInterval(() => {
 //But5Loc
 var nextMinutes = Math.random() * 300 + 1000;
 setTimeout(function(){
-  ZimBotInc.sendMessage(ZimBotInc.user.id, {text: `*ᴢɪᴍ ʙᴏᴛ ɪɴᴄ ANNOUNCEMENT:* *SUBSCRIBE TO DRIPS OFC*\n\n*YOUTUBE:* https://youtube.com/@zim-bot\n\n*NEW FEATURES COMING SOON SO STAY TUNED*\n\n*FEEL FREE TO BRING IDEAS OF THE FEATURES ON THE TABLE*\n\n*IF YOU WANT TO CONTRUBUTE FORK THE REPO, MAKE CHANGES PUSH YOUR CHANGES TO THE ORIGIN BRANCH AND WAIT FOR YOUR PULL REQUEST TO BE VERIFIED*\n\n*Thanks for choosing zim-bot*`,contextInfo: { externalAdReply:{title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",body:"SUBSCRIBE DRIPS OFC",showAdAttribution: true,mediaType:2,thumbnail: fs.readFileSync(`./drips.jpg`) ,mediaUrl:`https://youtu.be/KNu-gr2h7bo`, sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+  ZimBotInc.sendMessage(ZimBotInc.user.id, {text: `*ᴢɪᴍ ʙᴏᴛ ɪɴᴄ ANNOUNCEMENT:* *SUBSCRIBE TO DRIPS OFC*\n\n*YOUTUBE:* https://youtube.com/@zim-bot\n\n*NEW FEATURES COMING SOON SO STAY TUNED*\n\n*FEEL FREE TO BRING IDEAS OF THE FEATURES ON THE TABLE*\n\n*IF YOU WANT TO CONTRUBUTE FORK THE REPO, MAKE CHANGES PUSH YOUR CHANGES TO THE ORIGIN BRANCH AND WAIT FOR YOUR PULL REQUEST TO BE VERIFIED*\n\n*Thanks for choosing zim-bot*`,contextInfo: { externalAdReply:{title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",body:"SUBSCRIBE DRIPS OFC",showAdAttribution: true,mediaType:2,thumbnail: fs.readFileSync(`./drips.jpg`) ,mediaUrl:`https://youtu.be/KNu-gr2h7bo`, sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
   //anouncement by drips 
 }, nextMinutes * 300 * 1000);
 const send5Butlmg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
@@ -2859,8 +2859,8 @@ if (!regex1.test(args[0])) throw 'link!'
     // 'attachment; filenameq=ZidniGanz.zip'
     reply(`*Please wait, sending repository..*`)
     ZimBotInc.sendMessage(m.chat, { document: { url: url }, fileName: filename+'.zip', mimetype: 'application/zip' , quoted: m,contextInfo: { externalAdReply:{
-      title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",
-      body:"SUB DRIPS OFC",
+      title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",
+      body:"SUB RESIDENT GAMING SL",
       showAdAttribution: true,
       mediaType:2,
       thumbnail: fs.readFileSync('./drips.jpg'),
@@ -2879,8 +2879,8 @@ if (!regex1.test(args[0])) throw 'link!'
 				const ttrth = trut[Math.floor(Math.random() * trut.length)]
 				truteh = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
 			ZimBotInc.sendMessage(m.chat, {image: truteh, caption: '*Truth*\n\n'+ ttrth, quoted: m,contextInfo: { externalAdReply:{
-        title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",
-        body:"SUB DRIPS OFC",
+        title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",
+        body:"SUB RESIDENT GAMING SL",
         showAdAttribution: true,
         mediaType:2,
         thumbnail: fs.readFileSync(`./drips.jpg`) ,
@@ -3339,7 +3339,7 @@ replay(mess.wait)
  buttons: buttons,
  headerType: 4,
  contextInfo:{externalAdReply:{
- title:`ᴢɪᴍ ʙᴏᴛ ᴠ5`,
+ title:`𝙰𝙻𝙴𝚇𝙰-𝚅2`,
  body:`DRIPS OFC`,
  showAdAttribution: true,
  thumbnail: global.thumb,
@@ -3699,7 +3699,7 @@ let buttonMessage = {
         headerType: 4,
         contextInfo: { externalAdReply:{
         title:"ZIM BOT♡",
-        body:"SUB DRIPS OFC",
+        body:"SUB RESIDENT GAMING SL",
         mediaType:2,
         thumbnail: fs.readFileSync(`./drips.jpg`),
         }}
@@ -3728,7 +3728,7 @@ ZimBotInc.sendMessage(m.chat, { document: fs.readFileSync(kudzi.path),
     fileName: bhingu.title + '.mp3',
     mimetype: 'audio/mp4', quoted: m, contextInfo: { externalAdReply:{
 title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
-body:"SUB DRIPS OFC",
+body:"SUB RESIDENT GAMING SL",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: fs.readFileSync(`./drips.jpg`) ,
@@ -3757,7 +3757,7 @@ zimbotu =  `${jsoni.data.url}`
 
 ZimBotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
 title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
-body:"SUB DRIPS OFC",
+body:"SUB RESIDENT GAMING SL",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: fs.readFileSync(`./drips.jpg`) ,
@@ -3802,7 +3802,7 @@ buf = await getBuffer(kudzii.meta.image)
 await ZimBotInc.sendMessage(m.chat, {text: `*ɪᴍ sᴇɴᴅɪɴɢ ʏᴏᴜʀ sᴏɴɢ📻ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...* `}, {quoted: m})
 ZimBotInc.sendMessage(m.chat, { audio: fs.readFileSync(kudzii.path), fileName: bhinguu.title + '.mp3', mimetype: 'audio/mp4', quoted: m, contextInfo: { externalAdReply:{
 title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
-body:"SUB DRIPS OFC",
+body:"SUB RESIDENT GAMING SL",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: fs.readFileSync(`./drips.jpg`) ,
@@ -3877,7 +3877,7 @@ const result4 = `
 *${botname}*`
 reply(`${result4}`)
 ZimBotInc.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime ,  quoted : mudratunha, contextInfo: { externalAdReply:{
-  title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",
+  title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",
   body:"SUBSCRIBE DRIPS OFC",
   showAdAttribution: true,
   mediaType:2,
@@ -4040,7 +4040,7 @@ case 'fbdl': case 'fb': case 'facebook': case 'fbvideo': {
      ZimBotInc.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${txt}` }, {quoted: mudratunha})
      for (let i of data.result) {  
     ZimBotInc.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail:buf, mimetype: 'video/mp4', caption: `*◉ Quality :* ${i.quality}` ,  quoted: m,contextInfo: { externalAdReply:{
-      title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",
+      title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",
       body:"SUBSCRIBE DRIPS OFC",
       showAdAttribution: true,
       mediaType:2,
@@ -5098,7 +5098,7 @@ let media = await ZimBotInc.downloadAndSaveMediaMessage(quoted)
 let anu = await TelegraPh(media)
 let buf = await getBuffer(`https://violetics.pw/api/photofilter/${command}?apikey=beta&image=${anu}`)
 ZimBotInc.sendMessage(m.chat, { image: buf, jpegThumbnail:buf, caption: `PhotoFilter ${command}` ,  quoted: m, contextInfo: { externalAdReply:{
-  title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",
+  title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",
   body:"SUBSCRIBE DRIPS OFC",
   showAdAttribution: true,
   mediaType:2,
@@ -5231,7 +5231,7 @@ if (/1917/.test(command)) link = 'https://textpro.me/1917-style-text-effect-onli
 if (/leaves/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'
 let anu = await maker.textpro(link, q)
 ZimBotInc.sendMessage(m.chat, { image: { url: anu }, caption: `Made by ${global.botname}` ,  quoted: m, contextInfo: { externalAdReply:{
-  title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",
+  title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",
   body:"SUBSCRIBE DRIPS OFC",
   showAdAttribution: true,
   mediaType:2,
@@ -5274,7 +5274,7 @@ case 'underwaterocean': {
 if (!text) throw `Example : ${prefix + command} text`
 anu = await getBuffer(`https://violetics.pw/api/photooxy/${command}?apikey=beta&text=${text}`)
 ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*PHOTO OXY ${command}*` , quoted: m, contextInfo: { externalAdReply:{
-  title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",
+  title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",
   body:"SUBSCRIBE DRIPS OFC",
   showAdAttribution: true,
   mediaType:2,
@@ -5303,7 +5303,7 @@ case 'summerysand': {
 if (!text) throw `Example : ${prefix + command} nama anime`
 anu = await getBuffer(`https://violetics.pw/api/ephoto360/${command}?apikey=beta&text=${text}`)
 ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*EPHOTO ${command}*` ,  quoted: m, contextInfo: { externalAdReply:{
-  title:"ᴢɪᴍ ʙᴏᴛ ᴠ5",
+  title:"𝙰𝙻𝙴𝚇𝙰-𝚅2",
   body:"SUBSCRIBE DRIPS OFC",
   showAdAttribution: true,
   mediaType:2,
@@ -6022,7 +6022,7 @@ break
  case 'public': {
    if (!isCreator) throw global.owner
    ZimBotInc.public = true
-   reply('𝗭𝗶𝗺 𝗯𝗼𝘁 𝗻𝗼𝘄 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗮𝘀 𝗽𝘂𝗯𝗹𝗶𝗰')
+   reply('Alexa 𝗻𝗼𝘄 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗮𝘀 𝗽𝘂𝗯𝗹𝗶𝗰')
  }// https://hardianto.xyz/api/rip?image=https://i.imgur.com/rANDwCP.jpeg&apikey=hardianto
  break
  case 'attp': {
@@ -6095,8 +6095,8 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
  break
  case 'owner': case 'creator': {
  ZimBotInc.sendContact(m.chat, global.pemilik, m)
-const devsound = fs.readFileSync('./Zimbot/bot.mp3')
-ZimBotInc.sendMessage(m.chat, { audio: devsound, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+// const devsound = fs.readFileSync('./Zimbot/bot.mp3')
+// ZimBotInc.sendMessage(m.chat, { audio: devsound, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
  }
  
  break
@@ -6123,7 +6123,7 @@ latensie = speed() - timestampe
   anu = `
 *ᴜᴘᴛɪᴍᴇ :* ${runtime(process.uptime())}
 
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -6137,7 +6137,7 @@ latensie = speed() - timestampe
 └───────────●
 `
 const aliveer = fs.readFileSync('./Zimbot/alive.mp3')
-ZimBotInc.sendMessage(m.chat, { audio: aliveer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+//ZimBotInc.sendMessage(m.chat, { audio: aliveer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
 let buttoni = [
         {buttonId: `sc`, buttonText: {displayText: 'SOURCE CODE'}, type: 1},
         {buttonId: `owner`, buttonText: {displayText: 'OWNER'}, type: 1},
@@ -6155,7 +6155,7 @@ let buttoni = [
         headerType: 4,
         contextInfo: { externalAdReply:{
         title:"ᴢɪᴍ ʙᴏᴛ ɪɴᴄ",
-        body:"SUB DRIPS OFC",
+        body:"SUB RESIDENT GAMING SL",
         showAdAttribution: true,
         mediaType:2,
         thumbnail: fs.readFileSync('./drips.jpg'),
@@ -6198,7 +6198,7 @@ case 'listmenu':
   m.chat, 
   {
   text: `
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 ┌───〔 *_◉ᴜsᴇʀ ɪɴғᴏ◉_* 〕
@@ -6239,7 +6239,7 @@ latensie = speed() - timestampe
 anu = `
 *ᴜᴘᴛɪᴍᴇ :* ${runtime(process.uptime())}
 
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -6723,7 +6723,7 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'OWNER MENU')
 ram3 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -6777,7 +6777,7 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'DATABASE MENU')
 ram4 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -6815,7 +6815,7 @@ case 'photooxymenu': {
   buffer = await getBuffer(picak+'PHOTOOXY MENU')
   ram5 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu = `
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -6869,7 +6869,7 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'GROUP MENU')
 ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -6939,7 +6939,7 @@ case 'textpromenu': {
 ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }})
 ram11 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -7042,7 +7042,7 @@ case 'downloadmenu': {
 ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }})
 ram22 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -7136,7 +7136,7 @@ case 'photofiltermenu':{
 ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key }})
 ram30 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -7223,7 +7223,7 @@ case 'nsfwmenu':{
   buffer = await getBuffer(picak+'NSFW MENU')
   ram35 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu =`
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -7292,7 +7292,7 @@ case 'animemenu':{
   ram40 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   buffer = await getBuffer(picak+'ANIME MENU')
   anu =`
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -7382,7 +7382,7 @@ case 'convertmenu': {
   ram70 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   buffer = await getBuffer(picak+'CONVERT MENU')
   anu =`
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -7450,7 +7450,7 @@ case 'toolmenu': {
   buffer = await getBuffer(picak+'TOOL MENU')
   ram90 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu =`
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -7514,7 +7514,7 @@ case 'searchmenu':{
   buffer = await getBuffer(picak+'SEARCH MENU')
   ram200 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu =`
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
@@ -7590,7 +7590,7 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'EPHOTO MENU')
 ram250 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
-┌───〔 *_ᴢɪᴍ ʙᴏᴛ ᴠ5_* 〕
+┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
 └───────────●
 
