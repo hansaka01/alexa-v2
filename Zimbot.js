@@ -24,6 +24,15 @@ process.on('uncaughtException', console.error)
 require('./bot')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, WAZimBotIncection, MessageType, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, fetchLatestBaileysVersion } = require('@adiwajshing/baileys')
 const fs = require('fs')
+
+// open ai
+const { Configuration, OpenAIApi } = require("openai");
+const configuration = new Configuration({
+  apiKey: "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",
+});
+const openai = new OpenAIApi(configuration);
+// break open ai
+
 const util = require('util')
 const crypto = require('crypto')
 const chalk = require('chalk')
@@ -1943,14 +1952,14 @@ Ciee Whats Going On💖👀`
  }
  break
  case 'join': {
-   if (!isCreator) throw global.owner
-   if (!text) throw 'Enter the group link!'
-   if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) throw '*LINK INVALID*'
-   replay(mess.wait)
-   let result = args[0].split('https://chat.whatsapp.com/')[1]
-   await ZimBotInc.groupAcceptInvite(result).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
- }
- break
+                if (!isCreator) throw mess.owner
+                if (!text) throw '*Enter the Link Group!*'
+                if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) throw 'Link Invalid!'
+                m.reply(mess.wait)
+                let result = args[0].split('https://chat.whatsapp.com/')[1]
+                await ZimBotInc.groupAcceptInvite(result).then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+            }
+            break
  case 'leave': {
    if (!isCreator) throw global.owner
    await ZimBotInc.groupLeave(m.chat).then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
@@ -5281,7 +5290,26 @@ break
 //---END HERE------\\
 
 //CREATED BY DRIPS
+case'imagine' :{
 
+
+
+
+
+
+
+if (!text) throw `Example : ${prefix + command} enter what do you want to genarate`
+  const response = await openai.createImage({
+  prompt: `${text}`,
+  n: 1,
+  size: "1024x1024",
+});
+
+image_url = response.data.data[0].url;
+anu = await getBuffer(`${image_url}`)
+ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*Owner Hansaka*` }, { quoted: m})
+//m.reply(`${image_url}`)
+}break
 //----EPHOTO-------\\
 case '3d-wood': 
 case 'angels-wings': 
