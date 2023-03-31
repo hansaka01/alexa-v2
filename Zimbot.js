@@ -1115,7 +1115,7 @@ if (db.settings[botNumber].chatgpt) {
 if (m.chat.endsWith("@s.whatsapp.net")) {
 const { Configuration, OpenAIApi } = require('openai')
 const configuration = new Configuration({
-apiKey: process.env.OPENAI_API_KEY
+apiKey: "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"
 })
 const openai = new OpenAIApi(configuration)
 const jsonu = await openai.createCompletion({
