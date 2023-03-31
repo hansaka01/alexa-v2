@@ -28,7 +28,7 @@ const fs = require('fs')
 // open ai
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 // break open ai
