@@ -11,4 +11,6 @@ COPY . /zimbot
 
 RUN yarn
 
+RUN npm install openai
+
 CMD ["node", "."]
