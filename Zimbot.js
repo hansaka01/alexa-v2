@@ -4167,6 +4167,7 @@ let link = await getBuffer(i.url)
 
   }		
 break
+
 case 'tiktok4': { //DOWNLOADER
   // //if 
    if (!text) throw '*Enter a Link Query!*'                
@@ -6117,6 +6118,30 @@ requestt(hahahe, function (error, response, body) {
 });
 break
 case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'zimbot': case 'drips': case 'menu': {
+
+
+  // TIME 
+const time2 = moment().tz('Asia/Calcutta').format('HH:mm:ss')
+if(time2 < "23:59:00"){
+var ucapannya2 = `Good Night 🌒`
+}
+if(time2 < "19:00:00"){
+var ucapannya2 = ` Good night🌙`
+}
+if(time2 < "18:00:00"){
+var ucapannya2 = ` Good afternoon 🌅`
+}
+if(time2 < "15:00:00"){
+var ucapannya2 = ` Good afternoon 🌞`
+}
+if(time2 < "10:00:00"){
+var ucapannya2 = ` Good morning 🌄`
+}
+if(time2 < "05:00:00"){
+var ucapannya2 = ` Good morning 🌅`
+}
+
+
 ram9000 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 timestampe = speed();
 latensie = speed() - timestampe
@@ -6125,6 +6150,7 @@ latensie = speed() - timestampe
 
 ┌───〔 *_𝙰𝙻𝙴𝚇𝙰-𝚅2_* 〕
 ┊ᴡᴇʟᴄᴏᴍᴇ
+┊${ucapannya2}
 └───────────●
 
 ┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
