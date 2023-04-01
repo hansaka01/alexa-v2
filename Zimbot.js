@@ -3770,7 +3770,7 @@ body:"SUB RESIDENT GAMING SL",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: fs.readFileSync(`./drips.jpg`) ,
-mediaUrl:`https://wa.me/447441437150`, 
+mediaUrl:`https://wa.me/94705327164`, 
 sourceUrl: `https://youtu.be/KNu-gr2h7bo` }
 }}, {quoted: m})
 break
@@ -3815,8 +3815,8 @@ body:"SUB RESIDENT GAMING SL",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: fs.readFileSync(`./drips.jpg`) ,
-mediaUrl:`https://wa.me/447441437150`, 
-sourceUrl: `https://wa.me/447441437150` }
+mediaUrl:`https://wa.me/94705327164`, 
+sourceUrl: `https://wa.me/94705327164` }
 },
 }, {quoted: m})
 
@@ -5289,26 +5289,25 @@ break
 
 //---END HERE------\\
 
-//CREATED BY DRIPS
-case'imagine' :{
+//CREATED BY hansaka
+case 'imagine':{
 
+const Replicate = require('replicate')
 
-
-
-
-
-
-if (!text) throw `Example : ${prefix + command} enter what do you want to genarate`
-  const response = await openai.createImage({
-  prompt: `${text}`,
-  n: 1,
-  size: "1024x1024",
+const replicate = new Replicate({
+  auth: "e1b06947a4e66ac6f9d64d2175a8442db8d312e1",
 });
 
-image_url = response.data.data[0].url;
+const model = "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf";
+const input = { prompt: `${text}` };
+const output = await replicate.run(model, { input });
+
+// console.log(output);
+image_url = output;
 anu = await getBuffer(`${image_url}`)
 ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*Owner Hansaka*` }, { quoted: m})
-//m.reply(`${image_url}`)
+
+
 }break
 //----EPHOTO-------\\
 case '3d-wood': 
@@ -6109,10 +6108,17 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
  }
  break
  case 'owner': case 'creator': {
- ZimBotInc.sendContact(m.chat, global.pemilik, m)
-// const devsound = fs.readFileSync('./Zimbot/bot.mp3')
-// ZimBotInc.sendMessage(m.chat, { audio: devsound, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+
+
+
+
+ const vcard = fs.readFileSync('src/Hansaka.vcf')
+ZimBotInc.sendContact(m.chat, global.pemiRegionk, m)
+ //ZimBotInc.sendMessage(m.chat, { contacts: vcard, mimetype: 'text/vcard'}, {quoted: m})
+//ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*Owner Hansaka*` }, { quoted: m})
  }
+ 
+ break
  
  break
  case 'beetunha':
@@ -6209,7 +6215,7 @@ let buttoni = [
 break
   case 'bug': case 'report': {
   if(!text) throw `Enter The Bug Example\n\n${command} Menu Error `
-  ZimBotInc.sendMessage(`447441437150@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
+  ZimBotInc.sendMessage(`94705327164@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
 Report Message: ${text}` })
 reply(`*Successfully reported to the owner\n\nPlease make sure the bug is valid, if you play with this, use this feature again and again for no reason, you will be banned for using zim bot*`)
   }
@@ -6804,8 +6810,8 @@ anu = `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 
  var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
-				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
+				{ urlButton: { displayText: `SOURCECODE🥦`, url: `youtube.com/@resident_gaming` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
 			tempButtons(from, anu, '', buttonReplyy)
@@ -6843,7 +6849,7 @@ anu = `
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
  var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -6897,7 +6903,7 @@ case 'photooxymenu': {
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
   var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -6968,7 +6974,7 @@ anu = `
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -7071,7 +7077,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
 };
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 var textpromenui = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -7165,7 +7171,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
 };
 
 var downloadmenui = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -7251,7 +7257,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
 };
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -7320,7 +7326,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
 };
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -7410,7 +7416,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
                   };
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
   var buttonReplyy = [
-          { urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+          { urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
           { urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
           { urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
         ]
@@ -7478,7 +7484,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
 };
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -7542,7 +7548,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
 };
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -7618,7 +7624,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
 };
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
@@ -7678,7 +7684,7 @@ const sendMsg = await ZimBotInc.relayMessage(remoteJid, templateMessage, {});
                   };
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 var buttonReplyy = [
-				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/447441437150` } },
+				{ urlButton: { displayText: `OWNER🍏`, url : `https://wa.me/94705327164` } },
 				{ urlButton: { displayText: `SOURCECODE🥦`, url: `https://youtube.com/@zim-bot` } },
 				{ urlButton: { displayText: `WEBSITE🍎`, url: `http://dripsofc.tech` } }
 			]
