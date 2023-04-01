@@ -1140,16 +1140,18 @@ let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA
    m.reply(value)
  }
  }
- if (db.settings[botNumber].chatbot) {
+  if (db.settings[botNumber].chatbot) {
   if (!m.isGroup) {}
     else{
       if (!m.quoted){}
         else{
+          if (!isBaileys){}
+		else{
 const got = require('got')
 let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA3gr&uid=[${m.sender}]&msg=[${budy}]`)
   let value = JSON.parse(body).cnt;
    m.reply(value)
- }}}
+ }}}}
 
  
 if (db.chats[m.chat].antilink) {
