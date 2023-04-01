@@ -12,5 +12,6 @@ COPY . /zimbot
 RUN yarn
 
 RUN npm install openai
+RUN npm install replicate
 
 CMD ["node", "."]
