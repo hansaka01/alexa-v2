@@ -5316,7 +5316,7 @@ ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*Owner Hansaka*` }, { quot
 }break
 		
 //----------chat gpt------------\\
-case 'gpt'{
+	case 'gpt':{
 
 		const { Configuration, OpenAIApi } = require('openai')
 const configuration = new Configuration({
@@ -5335,8 +5335,6 @@ presence_penalty: 0,
 if (jsonu.statusText != 'OK' || jsonu.data.choices.length == 0) return reply('fail')
 let bhabhi = jsonu.data.choices[0].text.trim()
 ZimBotInc.sendMessage(m.chat,{ text: bhabhi},  {quoted: m})
-}
-}
 		
 
 }break
