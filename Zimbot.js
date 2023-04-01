@@ -5291,7 +5291,7 @@ break
 
 //CREATED BY hansaka
 case 'imagine':{
-
+if (!text) throw `Example : ${prefix + command} enter what do you want to genarate`
 const Replicate = require('replicate')
 
 const replicate = new Replicate({
