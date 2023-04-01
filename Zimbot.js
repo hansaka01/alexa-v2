@@ -1111,27 +1111,27 @@ var hg = `*Mission to kill Slime*\n\n🎁 *Reward for killing Slime*\n ┊ *Mone
             }
             }
 //----ANTILINK AND CHATBOT-----\\
-if (db.settings[botNumber].chatgpt) {
-if (m.chat.endsWith("@s.whatsapp.net")) {
-const { Configuration, OpenAIApi } = require('openai')
-const configuration = new Configuration({
-apiKey: "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"
-})
-const openai = new OpenAIApi(configuration)
-const jsonu = await openai.createCompletion({
-model: 'text-davinci-003',
-prompt: text,
-temperature: 0.7,
-max_tokens: 3500,
-top_p: 1,
-frequency_penalty: 0,
-presence_penalty: 0,
-})
-if (jsonu.statusText != 'OK' || jsonu.data.choices.length == 0) return reply('fail')
-let bhabhi = jsonu.data.choices[0].text.trim()
-ZimBotInc.sendMessage(m.chat,{ text: bhabhi},  {quoted: m})
-}
-}
+// if (db.settings[botNumber].chatgpt) {
+// if (m.chat.endsWith("@s.whatsapp.net")) {
+// const { Configuration, OpenAIApi } = require('openai')
+// const configuration = new Configuration({
+// apiKey: "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"
+// })
+// const openai = new OpenAIApi(configuration)
+// const jsonu = await openai.createCompletion({
+// model: 'text-davinci-003',
+// prompt: text,
+// temperature: 0.7,
+// max_tokens: 3500,
+// top_p: 1,
+// frequency_penalty: 0,
+// presence_penalty: 0,
+// })
+// if (jsonu.statusText != 'OK' || jsonu.data.choices.length == 0) return reply('fail')
+// let bhabhi = jsonu.data.choices[0].text.trim()
+// ZimBotInc.sendMessage(m.chat,{ text: bhabhi},  {quoted: m})
+// }
+// }
 if (db.settings[botNumber].privatechat) {
 if (m.chat.endsWith("@s.whatsapp.net")) {
 const got = require('got')
@@ -1141,11 +1141,16 @@ let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA
  }
  }
  if (db.settings[botNumber].chatbot) {
+  if (!m.isGroup) {}
+    else{
+      if (!m.quoted){}
+        else{
 const got = require('got')
 let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA3gr&uid=[${m.sender}]&msg=[${budy}]`)
   let value = JSON.parse(body).cnt;
    m.reply(value)
- }
+ }}}
+
  
 if (db.chats[m.chat].antilink) {
 if (budy.includes('https://chat.whatsapp.com/')) {
@@ -5309,6 +5314,33 @@ ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*Owner Hansaka*` }, { quot
 
 
 }break
+		
+//----------chat gpt------------\\
+case 'gpt'{
+
+		const { Configuration, OpenAIApi } = require('openai')
+const configuration = new Configuration({
+apiKey: "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"
+})
+const openai = new OpenAIApi(configuration)
+const jsonu = await openai.createCompletion({
+model: 'text-davinci-003',
+prompt: `${text}`,
+temperature: 0.7,
+max_tokens: 3500,
+top_p: 1,
+frequency_penalty: 0,
+presence_penalty: 0,
+})
+if (jsonu.statusText != 'OK' || jsonu.data.choices.length == 0) return reply('fail')
+let bhabhi = jsonu.data.choices[0].text.trim()
+ZimBotInc.sendMessage(m.chat,{ text: bhabhi},  {quoted: m})
+}
+}
+		
+
+}break
+		
 //----EPHOTO-------\\
 case '3d-wood': 
 case 'angels-wings': 
