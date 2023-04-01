@@ -1,5 +1,7 @@
 build:
   docker:
+      web: npm install express
       worker: Dockerfile
 run:
+   web: node server.js
    worker: npm start && node server.js
