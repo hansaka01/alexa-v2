@@ -631,6 +631,30 @@ function pickRandom(list) {
   }
 let beedrips = [f1,f2,f3,f4,f5,f6]
         let dripsee = pickRandom(beedrips)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// auto set bio
+
+ const autosetbio = '1'
+ if(autosetbio){
+ setInterval(() =>{
+
+
+        await ZimBotInc.setStatus(`🎀  𝒜𝐿𝐸𝒳𝒜  🎀| BOT ONLINE: ${moment.tz('Asia/Calcutta').format('HH:mm:ss')}`)
+        
+        
+ }, 60000);}
+	
+	
+	
+	
 /*
 if (budy.includes("://chat.whatsapp.com/")) {
   console.log(
@@ -5345,9 +5369,9 @@ presence_penalty: 0,
 if (jsonu.statusText != 'OK' || jsonu.data.choices.length == 0) return reply('fail')
 let bhabhi = jsonu.data.choices[0].text.trim()
  
-const answer = await ZimBotInc.sendMessage(m.chat,{ text: bhabhi },  {quoted: m})
+const answer = await ZimBotInc.sendMessage(m.chat,{ text: bhabhi },  {quoted: m});
   if (answer){
-    ZimBotInc.sendMessage(m.chat, { react: { text: `✔️`, key: m.key }})
+    ZimBotInc.sendMessage(m.chat, { react: { text: `✔️`, key: m.key }});
   }
 
 }}
