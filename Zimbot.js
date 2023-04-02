@@ -5320,13 +5320,18 @@ ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*Owner Hansaka*` }, { quot
 
 }break
 		
-//----------chat gpt------------\\
-	case 'gpt':{
+//----------gpt-------------\\
 
-		const { Configuration, OpenAIApi } = require('openai')
+case 'gpt':{
+
+if (!text){ throw `Example : Gpt write paragraph about ai `}
+  else{
+
+    const { Configuration, OpenAIApi } = require('openai')
 const configuration = new Configuration({
 apiKey: "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"
 })
+ const reactmg =  ZimBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
 const openai = new OpenAIApi(configuration)
 const jsonu = await openai.createCompletion({
 model: 'text-davinci-003',
@@ -5339,10 +5344,14 @@ presence_penalty: 0,
 })
 if (jsonu.statusText != 'OK' || jsonu.data.choices.length == 0) return reply('fail')
 let bhabhi = jsonu.data.choices[0].text.trim()
-ZimBotInc.sendMessage(m.chat,{ text: bhabhi},  {quoted: m})
-		
+ 
+const answer = await ZimBotInc.sendMessage(m.chat,{ text: bhabhi },  {quoted: m})
+  if (answer){
+    ZimBotInc.sendMessage(m.chat, { react: { text: `✔️`, key: m.key }})
+  }
 
-}break
+}}
+ break
 		
 //----EPHOTO-------\\
 case '3d-wood': 
