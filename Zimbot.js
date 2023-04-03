@@ -481,6 +481,7 @@ let picak = picaks[Math.floor(Math.random() * picaks.length)]
    if (chats) {
   if (!('mute' in chats)) chats.mute = false
   if (!('chatbot' in chats)) chats.chatbot = false
+  if (!('privatechatbot' in chats)) chats.privatechatbot = false
   if (!('antilink' in chats)) chats.antilink = true
   if (!('antilinkyt' in chats)) chats.antilinkyt = false
   if (!('autoblock' in chats)) chats.autoblock = false
@@ -504,6 +505,7 @@ let picak = picaks[Math.floor(Math.random() * picaks.length)]
 } else global.db.chats[m.chat] = {
    mute: false,
    chatbot: false,
+   privatechatbot: false,
    wame: false,
    antilink: true,
    antilinkyt: false,
@@ -1157,29 +1159,25 @@ var hg = `*Mission to kill Slime*\n\n🎁 *Reward for killing Slime*\n ┊ *Mone
 // ZimBotInc.sendMessage(m.chat,{ text: bhabhi},  {quoted: m})
 // }
 // }
-if (db.settings[botNumber].privatechat) {
+if (db.chats[m.chat].privatechatbot) {
 if (m.chat.endsWith("@s.whatsapp.net")) {
+
 const got = require('got')
 let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA3gr&uid=[${m.sender}]&msg=[${budy}]`)
   let value = JSON.parse(body).cnt;
    m.reply(value)
  }
  }
-  if (db.settings[botNumber].chatbot) {
-  if (!m.isGroup) {}
-    else{
-      
-       if (!m.quoted) {}else{
-   let { chat, fromMe, id, isBaileys } = m.quoted
-   if (!isBaileys) {}else{
- 
- 
-  
+
+   if (db.chats[m.chat].chatbot) {
+
+
+  if (m.isGroup) {
          const got = require('got')
 let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA3gr&uid=[${m.sender}]&msg=[${budy}]`)
   let value = JSON.parse(body).cnt;
    m.reply(value)
- }}}}
+ }}
 
  
 if (db.chats[m.chat].antilink) {
@@ -2348,42 +2346,48 @@ let buttons = [
 */
  break
 case 'chatbot': {
-if (!isCreator) throw mess.owner
+
+  if (m.isGroup) {
+    if (!isAdmins) throw mess.admin
 if (args[0] === "on") {
-if (db.settings[botNumber].chatbot) return reply(`*chatbot already on okay*`)
-db.settings[botNumber].chatbot = true
+if (db.chats[m.chat].chatbot) return reply(`*chatbot already on okay*`)
+db.chats[m.chat].chatbot = true
 reply(`*chatbot on enjoy talking to me okay*`)
 } else if (args[0] === "off") {
-if (!db.settings[botNumber].chatbot) return reply(`*Already off okay*`)
-db.settings[botNumber].chatbot = false
+if (!db.chats[m.chat].chatbot) return reply(`*Already off okay*`)
+db.chats[m.chat].chatbot = false
 reply(`*It was nice to chat with you goodbye _chatbot off_*`)
 } else {
  let drips = [
 { buttonId: `${command} on`, buttonText: { displayText: 'ON' }, type: 1 },
 { buttonId: `${command} off`, buttonText: { displayText: 'OFF' }, type: 1 }
   ]
-  await ZimBotInc.sendButtonText(m.chat, drips, `*┃🔏ʟᴏᴄᴀʟ ᴏɴʟʏ ᴍᴏᴅᴇ🔏┃*`, ZimBotInc.user.name, m)
-}
-  } 
-break
-case 'privatechat': {
-if (!isCreator) throw mess.owner
-if (args[0] === "on") {
-if (db.settings[botNumber].privatechat) return reply(`*chatbot already on okay*`)
-db.settings[botNumber].privatechat = true
-reply(`*chatbot on enjoy talking to me okay*`)
+  await ZimBotInc.sendButtonText(m.chat, drips, `*┃🔏chat bot🔏┃*`, ZimBotInc.user.name, m)
+  console.log('chabot')
+}}
+
+else{
+  if (args[0] === "on") {
+if (db.chats[m.chat].privatechatbot) return reply(`*chatbot already on okay*`)
+db.chats[m.chat].privatechatbot = true
+m.reply(`*chatbot on enjoy talking to me okay*`)
 } else if (args[0] === "off") {
-if (!db.settings[botNumber].privatechat) return reply(`*Already off okay*`)
-db.settings[botNumber].privatechat = false
-reply(`*It was nice to chat with you goodbye _chatbot off_*`)
+if (!db.chats[m.chat].privatechatbot) return reply(`*Already off okay*`)
+db.chats[m.chat].privatechatbot = false
+m.reply(`*It was nice to chat with you goodbye _chatbot off_*`)
 } else {
  let dripsu = [
 { buttonId: `${command} on`, buttonText: { displayText: 'ON' }, type: 1 },
 { buttonId: `${command} off`, buttonText: { displayText: 'OFF' }, type: 1 }
   ]
-  await ZimBotInc.sendButtonText(m.chat, dripsu, `*┃🔏ʟᴏᴄᴀʟ ᴏɴʟʏ ᴍᴏᴅᴇ🔏┃*`, ZimBotInc.user.name, m)
+  await ZimBotInc.sendButtonText(m.chat, dripsu, `*┃🔏chat bot🔏┃*`, ZimBotInc.user.name, m)
+  console.log('chabot')
 }
+}
+
+
   } 
+break
 case 'chatgpt': {
 if (!isCreator) throw mess.owner
 if (args[0] === "on") {
