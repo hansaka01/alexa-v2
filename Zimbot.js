@@ -642,13 +642,16 @@ let beedrips = [f1,f2,f3,f4,f5,f6]
 	
 	// auto set bio
 
-//  setInterval(() =>{
-
-
-//         await ZimBotInc.setStatus(`🎀  𝒜𝐿𝐸𝒳𝒜  🎀| BOT ONLINE: ${moment.tz('Asia/Calcutta').format('HH:mm:ss')}`)
-        
-        
-//  }, 60000);
+if (db.settings[botNumber].autobio) {
+  setInterval(function(){ 
+    //console.log("This function will be called every minute"); 
+      const wabio = `🎀  𝒜𝐿𝐸𝒳𝒜  🎀| BOT ONLINE: ${moment.tz('Asia/Calcutta').format('HH:mm:ss')}
+            *Owner* *Hansaka*
+      `
+       ZimBotInc.setStatus(wabio);
+        console.log(wabio)
+}, 1000);
+    }
 	
 	
 	
