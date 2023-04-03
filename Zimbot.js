@@ -650,7 +650,7 @@ if (db.settings[botNumber].autobio) {
       `
        ZimBotInc.setStatus(wabio);
         console.log(wabio)
-}, 1000);
+}, 60000);
     }
 	
 	
