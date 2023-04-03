@@ -642,13 +642,13 @@ let beedrips = [f1,f2,f3,f4,f5,f6]
 	
 	// auto set bio
 
- setInterval(() =>{
+//  setInterval(() =>{
 
 
-        await ZimBotInc.setStatus(`🎀  𝒜𝐿𝐸𝒳𝒜  🎀| BOT ONLINE: ${moment.tz('Asia/Calcutta').format('HH:mm:ss')}`)
+//         await ZimBotInc.setStatus(`🎀  𝒜𝐿𝐸𝒳𝒜  🎀| BOT ONLINE: ${moment.tz('Asia/Calcutta').format('HH:mm:ss')}`)
         
         
- }, 60000);
+//  }, 60000);
 	
 	
 	
