@@ -642,15 +642,13 @@ let beedrips = [f1,f2,f3,f4,f5,f6]
 	
 	// auto set bio
 
- const autosetbio = '1'
- if(autosetbio){
  setInterval(() =>{
 
 
         await ZimBotInc.setStatus(`🎀  𝒜𝐿𝐸𝒳𝒜  🎀| BOT ONLINE: ${moment.tz('Asia/Calcutta').format('HH:mm:ss')}`)
         
         
- }, 60000);}
+ }, 60000);
 	
 	
 	
@@ -5355,7 +5353,7 @@ if (!text){ throw `Example : Gpt write paragraph about ai `}
 const configuration = new Configuration({
 apiKey: "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"
 })
- const reactmg =  ZimBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
+// const reactmg =  ZimBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
 const openai = new OpenAIApi(configuration)
 const jsonu = await openai.createCompletion({
 model: 'text-davinci-003',
@@ -5369,10 +5367,11 @@ presence_penalty: 0,
 if (jsonu.statusText != 'OK' || jsonu.data.choices.length == 0) return reply('fail')
 let bhabhi = jsonu.data.choices[0].text.trim()
  
-const answer = await ZimBotInc.sendMessage(m.chat,{ text: bhabhi },  {quoted: m});
-  if (answer){
-    ZimBotInc.sendMessage(m.chat, { react: { text: `✔️`, key: m.key }});
-  }
+
+  ZimBotInc.sendMessage(m.chat,{ text: bhabhi },  {quoted: m});
+
+ 
+  
 
 }}
  break
