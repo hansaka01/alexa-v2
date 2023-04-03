@@ -1137,6 +1137,29 @@ var hg = `*Mission to kill Slime*\n\n🎁 *Reward for killing Slime*\n ┊ *Mone
             reply("Emoji error, please enter another emojinNOTE : Just enter 1 emoji")
             }
             }
+	  
+	   // TIME 
+const time2 = moment().tz('Asia/Calcutta').format('HH:mm:ss')
+if(time2 < "23:59:00"){
+var ucapannya2 = `Good Night 🌒`
+}
+if(time2 < "19:00:00"){
+var ucapannya2 = ` Good night🌙`
+}
+if(time2 < "18:00:00"){
+var ucapannya2 = ` Good afternoon 🌅`
+}
+if(time2 < "15:00:00"){
+var ucapannya2 = ` Good afternoon 🌞`
+}
+if(time2 < "10:00:00"){
+var ucapannya2 = ` Good morning 🌄`
+}
+if(time2 < "05:00:00"){
+var ucapannya2 = ` Good morning 🌅`
+}
+
+	  
 //----ANTILINK AND CHATBOT-----\\
 // if (db.settings[botNumber].chatgpt) {
 // if (m.chat.endsWith("@s.whatsapp.net")) {
@@ -2310,6 +2333,12 @@ case 'deletevote': case'delvote': case 'hapusvote': {
 }
  }
  break
+		    case 'hi': case 'Hello':  case 'hello':{
+        
+
+            m.reply(`Hi ${pushname}. ${ucapannya2}!. I'm Alexa. How can I help you?`)
+    }
+    break
  case 'editinfo': {
    if (!m.isGroup) throw mess.group
    if (!isBotAdmins) throw mess.botAdmin
