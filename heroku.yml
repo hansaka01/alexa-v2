@@ -1,8 +1,8 @@
 build:
   
   docker:
-  worker: Dockerfile
+      worker: Dockerfile
       web: Dockerfile
 run:
     worker: npm start
-   web: node server.js
+    web: node server.js
