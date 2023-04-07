@@ -1186,7 +1186,7 @@ if (db.chats[m.chat].privatechatbot) {
 if (m.chat.endsWith("@s.whatsapp.net")) {
 
 const got = require('got')
-let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA3gr&uid=[${m.sender}]&msg=[${budy}]`)
+let {body} = await got(`http://api.brainshop.ai/get?bid=174173&key=2Rzqg7t4LzKLbdY4&uid=[${m.sender}]&msg=[${budy}]`)
   let value = JSON.parse(body).cnt;
    m.reply(value)
  }
