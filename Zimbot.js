@@ -480,12 +480,12 @@ let picak = picaks[Math.floor(Math.random() * picaks.length)]
    if (typeof chats !== 'object') global.db.chats[m.chat] = {}
    if (chats) {
   if (!('mute' in chats)) chats.mute = false
-  if (!('chatbot' in chats)) chats.chatbot = false
-  if (!('privatechatbot' in chats)) chats.privatechatbot = false
+  if (!('chatbot' in chats)) chats.chatbot = true
+  if (!('privatechatbot' in chats)) chats.privatechatbot = true
   if (!('antilink' in chats)) chats.antilink = true
   if (!('antilinkyt' in chats)) chats.antilinkyt = false
   if (!('autoblock' in chats)) chats.autoblock = false
-  if (!('isWelcome' in chats)) chats.isWelcome = false
+  if (!('isWelcome' in chats)) chats.isWelcome = true
   if (!('localonly' in chats)) chats.localonly = true
   if (!('antilinkall' in chats)) chats.antilinkall = false
   if (!('antiytchannel' in chats)) chats.antiytchannel = false
@@ -504,12 +504,12 @@ let picak = picaks[Math.floor(Math.random() * picaks.length)]
  
 } else global.db.chats[m.chat] = {
    mute: false,
-   chatbot: false,
-   privatechatbot: false,
+   chatbot: true,
+   privatechatbot: true,
    wame: false,
    antilink: true,
    antilinkyt: false,
-   isWelcome: false,
+   isWelcome: true,
    antilinkall: false,
    antiytchannel: false,
    antitiktok: false,
