@@ -2050,6 +2050,22 @@ let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender :
 await ZimBotInc.groupParticipantsUpdate(m.chat, [users], 'promote')
 }
 break
+
+case 'powner': case 'promoteowner': { 
+        if (isBan) throw mess.ban
+           // //if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
+            if (!m.isGroup) throw mess.group
+                    if (!isBotAdmins) throw mess.botAdmin
+                    if (!isCreator) throw mess.owner
+                    if (!isInventoryLimit){ addInventoriLimit(m.sender) }
+                if (isLimit < 1) return m.reply(mess.endLimit)
+                kurangLimit(m.sender, 1)
+                m.reply(`*1 limit used*`) 
+                let users =   m.sender[0] ? m.sender : text.replace(/[^global.pemiRegionk]/g, '')+'@s.whatsapp.net'
+            await ZimBotInc.groupParticipantsUpdate(m.chat,  [users], 'promote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
+        }
+    
+        break
 case 'demote': {
 if (!m.isGroup) throw mess.group
    if (!isBotAdmins) throw mess.botAdmin
