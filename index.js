@@ -327,12 +327,12 @@ const ramCheck = setInterval(() => {
             return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
     }
     
-   ZimBotInc.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+          ZimBotInc.sendContact = async (jid, kon, quoted = '', opts = {}) => {
     let list = []
     for (let i of kon) {
         list.push({
             displayName: await ZimBotInc.getName(i + '@s.whatsapp.net'),
-            vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nFN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:DRIPS\nitem2.EMAIL;type=INTERNET:reinhardtuna@mail.uk\nitem2.X-ABLabel:Email\nitem3.URL:https://github.com/zimb-bot/\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;ZIMBABWE;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+            vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nFN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:HANSAKA\nitem2.EMAIL;type=INTERNET:rasanjanahansaka8@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://github.com/hansaka01/\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;SRILANKA;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
         })
     }
     ZimBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })
