@@ -482,7 +482,7 @@ let picak = picaks[Math.floor(Math.random() * picaks.length)]
   if (!('mute' in chats)) chats.mute = false
   if (!('chatbot' in chats)) chats.chatbot = true
   if (!('privatechatbot' in chats)) chats.privatechatbot = true
-  if (!('antilink' in chats)) chats.antilink = true
+  if (!('antilink' in chats)) chats.antilink = false
   if (!('antilinkyt' in chats)) chats.antilinkyt = false
   if (!('autoblock' in chats)) chats.autoblock = false
   if (!('isWelcome' in chats)) chats.isWelcome = true
@@ -507,7 +507,7 @@ let picak = picaks[Math.floor(Math.random() * picaks.length)]
    chatbot: true,
    privatechatbot: true,
    wame: false,
-   antilink: true,
+   antilink: false,
    antilinkyt: false,
    isWelcome: true,
    antilinkall: false,
@@ -1209,7 +1209,7 @@ let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA
  
 if (db.chats[m.chat].antilink) {
 if (budy.includes('https://chat.whatsapp.com/')) {
-if (!m.key.fromMe) {
+if (!isAdmins) {
 reply('[ 𝗭𝗜𝗠 𝗕𝗢𝗧 𝗔𝗡𝗧𝗜𝗟𝗜𝗡𝗞 ]\n𝗟𝗶𝗻𝗸 𝗻𝗼𝘁 𝗮𝗹𝗹𝗼𝘄𝗲𝗱 𝗵𝗲𝗿𝗲, 𝗢𝗞𝘆?..,\n𝗚𝗼𝗼𝗱 𝗯𝘆𝗲 𝗜𝗺 𝗸𝗶𝗰𝗸𝗶𝗻𝗴 𝘂𝗿 𝗮𝘀𝘀 𝗻𝗼𝘄👋🏻')
 let sianj = m.sender
 await ZimBotInc.groupParticipantsUpdate(m.chat, [sianj], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
