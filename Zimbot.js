@@ -1185,10 +1185,34 @@ var ucapannya2 = ` Good morning 🌅`
 if (db.chats[m.chat].privatechatbot) {
 if (m.chat.endsWith("@s.whatsapp.net")) {
 
-const got = require('got')
-let {body} = await got(`http://api.brainshop.ai/get?bid=174173&key=2Rzqg7t4LzKLbdY4&uid=[${m.sender}]&msg=[${budy}]`)
-  let value = JSON.parse(body).cnt;
-   m.reply(value)
+// const got = require('got')
+// let {body} = await got(`http://api.brainshop.ai/get?bid=174173&key=2Rzqg7t4LzKLbdY4&uid=[${m.sender}]&msg=[${budy}]`)
+//   let value = JSON.parse(body).cnt;
+//    m.reply(value)
+	const { Configuration, OpenAIApi } = require("openai");
+
+const configuration = new Configuration({
+  apiKey:'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',
+});
+const openai = new OpenAIApi(configuration);
+
+const response = await openai.createCompletion({
+  model: "text-davinci-003",
+  prompt: `The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and \n What is your name\n My name is Alexa. It's nice to meet you ${pushname}!\n hi\n Hi ${pushname}! What can I do for you today?\n ${budy}\n`,
+  temperature: 0.9,
+  max_tokens: 3500,
+  top_p: 1,
+  user: `${m.sender}`,
+  frequency_penalty: 0,
+  presence_penalty: 0.6,
+  stop: [`${m.sender}:`],
+});
+if (response.statusText != 'OK' || response.data.choices.length == 0) return reply('fail')
+let bhabhi = response.data.choices[0].text.trim()
+console.log(bhabhi)
+m.reply(bhabhi)
+	
+	
  }
  }
 
@@ -1200,10 +1224,36 @@ let {body} = await got(`http://api.brainshop.ai/get?bid=174173&key=2Rzqg7t4LzKLb
        if (!m.quoted) {}else{
    let { chat, fromMe, id, isBaileys } = m.quoted
    if (!isBaileys) {}else{
-         const got = require('got')
-let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA3gr&uid=[${m.sender}]&msg=[${budy}]`)
-  let value = JSON.parse(body).cnt;
-   m.reply(value)
+//          const got = require('got')
+// let {body} = await got(`http://api.brainshop.ai/get?bid=173030&key=zK0sxNKb6C9pA3gr&uid=[${m.sender}]&msg=[${budy}]`)
+//   let value = JSON.parse(body).cnt;
+//    m.reply(value)
+	   
+	   const { Configuration, OpenAIApi } = require("openai");
+
+const configuration = new Configuration({
+  apiKey:'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',
+});
+const openai = new OpenAIApi(configuration);
+
+const response = await openai.createCompletion({
+  model: "text-davinci-003",
+  prompt: `The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and \n What is your name\n My name is Alexa. It's nice to meet you ${pushname}!\n hi\n Hi ${pushname}! What can I do for you today?\n ${budy}\n`,
+  temperature: 0.9,
+  max_tokens: 3500,
+  top_p: 1,
+  user: `${m.sender}`,
+  frequency_penalty: 0,
+  presence_penalty: 0.6,
+  stop: [`${m.sender}:`],
+});
+if (response.statusText != 'OK' || response.data.choices.length == 0) return reply('fail')
+let bhabhi = response.data.choices[0].text.trim()
+console.log(bhabhi)
+m.reply(bhabhi)
+	   
+	   
+	   
  }}}}
 
  
@@ -5399,7 +5449,7 @@ ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*Owner Hansaka*` }, { quot
 }break
 		
 //----------gpt-------------\\
-case 'gpt':{
+	case 'gpt': case 'alexa': {
 
 if (!text){ throw `Example : Gpt write paragraph about ai `}
   else{
