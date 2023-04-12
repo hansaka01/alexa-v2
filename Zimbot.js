@@ -5451,7 +5451,7 @@ ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*Owner Hansaka*` }, { quot
 //----------gpt-------------\\
 	case 'gpt': case 'alexa': {
 
-if (!text){ throw `Example : Gpt write paragraph about ai `}
+if (!text){ throw `Example : ${command} write paragraph about ai `}
   else{
 
     const { Configuration, OpenAIApi } = require('openai')
