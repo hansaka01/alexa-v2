@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: cs-261287827031-default
+    runs-on: google-cloud
 
     strategy:
       matrix:
