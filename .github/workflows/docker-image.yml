@@ -1,0 +1,18 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "zim-bot" ]
+  pull_request:
+    branches: [ "zim-bot" ]
+
+jobs:
+
+  build:
+
+    runs-on: cs-261287827031-default
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
