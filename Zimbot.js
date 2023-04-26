@@ -28,7 +28,7 @@ const fs = require('fs')
 // open ai
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey:process.env.OPEN_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 // break open ai
@@ -76,8 +76,8 @@ const { Boom } = require("@hapi/boom")
 const ffmpeg = require('fluent-ffmpeg')
 const { checkPetualangUser, addInventori, addBesi, sellBesi, getBesi, addDm, sellDm, getDm, addEmas, sellEmas, getEmas, addFish, sellFish, getFish } = require('./tez.js')
 const { addLevelingId, addLevelingLevel ,addLevelingXp, getLevelingId, getLevelingLevel, getLevelingXp } = require('./level')
-const { isLimit, limitAdd, getLimit, giveLimit, addBalance, kurangBalance, getBalance, isGame, gameAdd, givegame, cekGLimit } = require('./limit')
-
+const { isLimit, limitAdd, getLimit, giveLimit, addBalance, kurangBalance, getBalance, isGame, gameAdd, givegame, cekGLimit } = require('./limit');
+const env = require ('dotenv').config();
 //xp and leveling database⧈⧈⧈⧈
 
 //message type
@@ -1192,7 +1192,7 @@ if (m.chat.endsWith("@s.whatsapp.net")) {
 	const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey:'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',
+  apiKey:process.env.OPEN_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -1232,7 +1232,7 @@ m.reply(bhabhi)
 	   const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey:'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',
+  apiKey:process.env.OPEN_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -5456,7 +5456,7 @@ if (!text){ throw `Example : ${command} write paragraph about ai `}
 
     const { Configuration, OpenAIApi } = require('openai')
 const configuration = new Configuration({
-apiKey: "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"
+apiKey:process.env.OPEN_API_KEY,
 })
 //await ZimBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }});
 const openai = new OpenAIApi(configuration)
