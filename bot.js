@@ -18,7 +18,7 @@ global.Api = new (require('./plugins/neoxrApi.js'))(process.env.API_KEY)
 //settings
 global.owner = ['94705327164',''] //owner number ++447441437150
 global.wame = ['94705327164'] 
-global.openai = ['your openai api key']
+global.openai = 'your openai api key'
 global.replicate = 'your replicate key'
 global.pemiRegionk = ['94705327164'] //owner number ++447441437150
 global.premium = ['94705327164'] //premium number ++447441437150
