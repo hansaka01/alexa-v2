@@ -1,25 +1,4 @@
-// ⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈
-//▮ZIM BOT INC 2022 ®️ALL RIGHTS RESERVED
-//▮
-//▮FORK AND DON'T FORGET TO GIVE A STAR
-//▮
-//▮THIS SOFTWARE IS UNDER UZ COPYRIGHT
-//▮
-//▮REPORT ABUSE OF THIS SOFTWARE EMAIL US
-//▮reinhardtuna@mail.uk
-//▮WHATSAPP US : +44 7441 437150
-//▮YOUTUBE CHANNELL: https://youtube.com/c/DRIPSOFC
-//▮
-//╰▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-//
-//┏━━━━━━━━━━━━━━━━━━━━━━━━━
-//┃THIS SOFTWARE INCLUDES 
-//┃SOME ENCRYPTED FILES
-//┃
-//┃THANKS FOR CHOOSING ZIMBOT
-//┃I WROTE THIS SCRIPT BY MYSELF THIS SCRIPT IS FOR EVERYONE DONT SELL IT
-//┗━━━━━━━━━━━━━━━━━━━━━━━━━
-//
+//code by hansaka
 const fs = require('fs')
 const chalk = require('chalk')
 
@@ -39,6 +18,7 @@ global.Api = new (require('./plugins/neoxrApi.js'))(process.env.API_KEY)
 //settings
 global.owner = ['94705327164',''] //owner number ++447441437150
 global.wame = ['94705327164'] 
+global.openai = ['your open ai api key']
 global.pemiRegionk = ['94705327164'] //owner number ++447441437150
 global.premium = ['94705327164'] //premium number ++447441437150
 global.pengguna = 'hansaka' //username
