@@ -28,7 +28,7 @@ const fs = require('fs')
 // open ai
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
-  apiKey:process.env.OPEN_API_KEY,
+  apiKey:global.openai,
 });
 const openai = new OpenAIApi(configuration);
 // break open ai
@@ -1192,7 +1192,7 @@ if (m.chat.endsWith("@s.whatsapp.net")) {
 	const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey:process.env.OPEN_API_KEY,
+  apiKey:global.openai,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -1232,7 +1232,7 @@ m.reply(bhabhi)
 	   const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey:process.env.OPEN_API_KEY,
+  apiKey:global.openai,
 });
 const openai = new OpenAIApi(configuration);
 
@@ -5433,7 +5433,7 @@ if (!text) throw `Example : ${prefix + command} enter what do you want to genara
 const Replicate = require('replicate')
 
 const replicate = new Replicate({
-  auth: "e1b06947a4e66ac6f9d64d2175a8442db8d312e1",
+  auth: global.replicate,
 });
 
 const model = "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf";
@@ -5456,7 +5456,7 @@ if (!text){ throw `Example : ${command} write paragraph about ai `}
 
     const { Configuration, OpenAIApi } = require('openai')
 const configuration = new Configuration({
-apiKey:process.env.OPEN_API_KEY,
+apiKey:global.openai,
 })
 //await ZimBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }});
 const openai = new OpenAIApi(configuration)
