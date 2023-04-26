@@ -1,21 +1,19 @@
 { pkgs }: {
+    deps = [
 
-	deps = [		pkgs.nodejs-16_x
-
-        pkgs.nodePackages.typescript-language-server
-
-        pkgs.yarn
-
-        pkgs.arcan.ffmpeg
-
-        pkgs.replitPackages.jest
-
+        pkgs.sudo
+         pkgs.nodejs-16_x
         pkgs.libwebp
-
-        pkgs.imagemagick
-
+        pkgs.python
+	      pkgs.nodePackages.typescript
+        pkgs.libuuid
+        pkgs.ffmpeg
+        pkgs.imagemagick  
+        pkgs.wget
         pkgs.git
-
-	];
-
+        pkgs.nodePackages.pm2
+    ];
+  env ={
+    LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [pkgs.libuuid];
+  };
 }
