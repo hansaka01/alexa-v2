@@ -38,7 +38,10 @@ const  { Boom } = require('@hapi/boom')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
-const Drips = require('drips-memes')
+const Drips = require('drips-memes');
+
+function webview () { require ('./server.js')};
+webview();
 
 global.api = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
