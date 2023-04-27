@@ -1,15 +1,4 @@
-const express = require('express');
-const fs = require('fs');
-const app = express();
-
-
-
-
-app.get('/', (req, res) => {
-  res
-    .status(200)
-//const index = fs.readFileSync('./index.html')
-    .send(`<html lang="en-US"><head>
+const body = `<html lang="en-US"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +42,7 @@ app.get('/', (req, res) => {
 <p><a href="https://vshymanskyy.github.io/StandWithUkraine"><img src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg" alt="SWUbanner"></a></p>
 
 <p><a href="https://youtu.be/ww4z2m3uORU"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&amp;logo=youtube&amp;logoColor=ff000000&amp;link=https://youtu.be/ww4z2m3uORU"><br></a></p>
-<h1 id="zim-bot-inc">ZIM BOT INC</h1>
+<h1 id="zim-bot-inc">ALEXA INC</h1>
 <p>WhatsApp with so Many features using multi device  <a href="https://github.com/adiwajshing/baileys">BAILEYS</a></p>
 
 <p>## <code class="language-plaintext highlighter-rouge">Donate Me</code></p>
@@ -150,14 +139,14 @@ echo scan the qr code and enjoy bot
     <script>anchors.add();</script>
   
 
-</body></html>`)
-    .end();
-});
+</body></html>`
+
+  var http = require('http');
+http.createServer(function (req, res) {
+  res.write(body);
+  res.end();
+}).listen(8080);
+
  
-// Start the server
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-  console.log('Press Ctrl+C to quit.');
-});
+
 
