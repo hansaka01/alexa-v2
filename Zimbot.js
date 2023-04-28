@@ -1,25 +1,7 @@
-// ⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈⧈
-//▮ᴢɪᴍ ʙᴏᴛ ɪɴᴄ 2023 ®️ALL RIGHTS RESERVED
-//▮
-//▮FORK AND DON'T FORGET TO GIVE A STAR
-//▮
-//▮THIS SOFTWARE IS UNDER UZ COPYRIGHT
-//▮
-//▮REPORT ABUSE OF THIS SOFTWARE EMAIL US
-//▮blessedtuna@mail.uk
-//▮WHATSAPP US : +44 7441 437150
-//▮YOUTUBE CHANNELL: https://youtube.com/@zim-bot
-//▮
-//╰▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-//
-//┏━━━━━━━━━━━━━━━━━━━━━━━━━
-//┃THIS SOFTWARE INCLUDES 
-//┃SOME ENCRYPTED FILES
-//┃
-//┃THANKS FOR CHOOSING ZIMBOT
-//┃I WROTE THIS SCRIPT BY MYSELF THIS SCRIPT IS FOR EVERYONE DONT SELL IT
-//┗━━━━━━━━━━━━━━━━━━━━━━━━━
-//
+/*Code by Hansaka
+Thanks drips ofc, adiwajshing/baileys
+
+*/
 process.on('uncaughtException', console.error)
 require('./bot')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, WAZimBotIncection, MessageType, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, fetchLatestBaileysVersion } = require('@adiwajshing/baileys')
@@ -2879,6 +2861,39 @@ await ZimBotInc.sendButtonText(m.chat, drips, `*┃🔏ᴀɴᴛɪʟᴏɴᴋ ᴀ�
  }
  }
 break
+		
+		    case 'res': {
+   replay(mess.wait)
+let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
+   let media = await ZimBotInc.downloadAndSaveMediaMessage(quoted)
+   if (/image/.test(mime)) {
+  let anu = await TelegraPh(media)
+      const Replicate = require('replicate');
+
+const replicate = new Replicate({
+  auth: 'e1b06947a4e66ac6f9d64d2175a8442db8d312e1',
+});
+
+const output = await replicate.run(
+  "tencentarc/gfpgan:9283608cc6b7be6b65a8e44983db012355fde4132009bf99d976b2f0896856a3",
+  {
+    input: {
+      img: util.format(anu),
+    }
+  }
+);
+      
+     pho = await getBuffer(output);
+     des = `*Owner Hansaka* 
+     image Url : ${output}`
+       
+       
+ZimBotInc.sendMessage(m.chat, { image: pho, caption: des }, { quoted: m})
+     
+   }
+
+   await fs.unlinkSync(media)
+ }break
 case 'adripsantitwt': case 'antitwitter': case 'antilinktwit': {
 if (!m.isGroup) throw mess.group
 if (!isBotAdmins) throw mess.botAdmin
