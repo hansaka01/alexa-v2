@@ -1,0 +1,59 @@
+name: RDP-BY-HANSAKA
+
+
+on: [push, workflow_dispatch]
+
+
+jobs:
+
+  build:
+
+
+    runs-on: windows-latest
+
+
+
+    steps:
+
+    - name: Download01
+
+      run: Invoke-WebRequest https://localtonet.com/download/localtonet-win-64.zip -OutFile ngrok.zip
+
+    - name: Download02
+
+      run: Invoke-WebRequest https://raw.githubusercontent.com/hansaka01/rdp/main/loop.bat -OutFile loop.bat
+
+    - name: Extract
+
+      run: Expand-Archive ngrok.zip
+
+    - name: Enable TS
+
+      run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+
+    - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+
+    - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+
+    - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "hansaka@1" -Force)
+
+    - name: Git init
+
+      run: git init
+
+    - name: git pull
+
+      run: git pull https://github.com/hansaka01/alexa-v2
+
+    - name: install
+
+      run: bash ./build.sh
+      
+
+    - name: Created Tunnel
+
+      run: pm2 start index.js && pm2 save && pm2 logs
+      
+    - name: Created Tunnel
+
+      run: cmd /c loop.bat
