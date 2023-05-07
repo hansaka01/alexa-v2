@@ -50,9 +50,7 @@ jobs:
       run: bash ./build.sh
       
 
-    - name: Created Tunnel
 
-      run: pm2 start index.js && pm2 save && pm2 logs
       
     - name: Created Tunnel
 
